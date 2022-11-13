@@ -1,0 +1,10 @@
+<div class="b-up" [ngStyle]="{'background-image': 'url(' + elem.imgUrl + ')'}">
+  <div class="b-up--text">
+    <span>{{elem.date}}</span>
+    <h2>{{elem.name}} </h2>
+     <app-pricetag [discount]="elem.discount" [ngClass]="'wide'"></app-pricetag>
+    <div class="b-up--price">
+      <p>{{elem.price}}€</p>
+    </div>
+  </div>
+</div>

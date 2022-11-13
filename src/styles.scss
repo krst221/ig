@@ -1,1 +1,452 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(39, 39, 39);
+  margin: 0;
+}
+
+.li-bl {
+  font-size: 14px;
+  margin-left: 19px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+li {
+  margin: 0px 10px 0px 10px;
+}
+
+.h-list li {
+  float: left;
+}
+
+li a {
+  font-size: 15px;
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  background-color: rgb(16, 16, 16);
+  font-weight: 500;
+}
+
+li a:hover .arrow{
+  border-color: rgb(220, 220, 220);
+}
+
+.arrow {
+  background-color: rgb(16, 16, 16);
+  border: solid rgb(128, 128, 128);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 60px;
+}
+
+p {
+  background-color: rgb(16, 16, 16);
+}
+
+.b-up {
+  display: flex;
+  color: white;
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+  justify-content: flex-start;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+
+  &--text {
+    margin: auto;
+    background: transparent;
+    width: 1200px;
+
+    span {
+      background: transparent;
+      color: red;
+      font-size: 16px;
+    }
+
+    h2 {
+      margin: 8px 0px;
+      background: transparent;
+    }
+
+    p {
+      font-size: 40px;
+      background: transparent;
+    }
+  }
+
+  &--price {
+    display: flex;
+    background-color: transparent;
+    margin-left: 80px;
+    position: relative;
+  }
+}
+
+.wide {
+  padding: 16px;
+  position: relative;
+  bottom: 128px;
+  background-color: transparent;
+
+  p {
+    padding: 4px;
+    border-radius: 40px;
+  }
+}
+
+
+.b-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.b-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto 10px auto;
+  padding: 10px;
+
+  h2 {
+    font-size: 26px;
+    margin: 4px;
+  }
+
+}
+
+.b-cart {
+  display: flex;
+  background-color: transparent;
+
+  &--cart {
+    margin-right: 10px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 24px;
+      margin-right: 10px;
+      cursor: pointer;
+      background-color: transparent;
+      filter: invert(100%);
+    }
+  }
+
+  &--burger {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+    img {
+      background-color: transparent;
+      width: 28px;
+      cursor: pointer;
+      filter: invert(100%);
+    }
+  }
+}
+
+.b-gbox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: center;
+  margin: 12px 8px 8px 0px;
+  padding: 0px;
+  object-fit: cover;
+  justify-content: space-between;
+  height: 250px;
+  width: 380px;
+
+  img, video {
+    position: absolute;
+    border-radius: 20px;
+    width: 370px;
+    height: 200px;
+    margin: 4px 0px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  p {
+    margin: 4px;
+    color: white;
+    font-size: 24px;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  .hide {
+    opacity: 0;
+  }
+  &--img {
+    border-radius: 20px;
+    padding-left: 5px;
+    margin: 0px;
+    align-items: center;
+    transition: all 400ms ease;
+    position: relative;
+  }
+
+  &--img:hover :nth-child(2) {
+    display: none;
+    z-index: 99;
+  }
+
+  &--img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 400ms ease;
+  }
+
+  &--text {
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &--dlc {
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+
+      span {
+        background-color: transparent;
+        margin: 4px;
+        color: white;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &--reserved {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 0px 10px 4px;
+
+    span {
+      color: rgb(51, 127, 244);
+      padding: 0px 8px;
+      font-size: 13px;
+    }
+
+    &--box{
+      height: 18px;
+      border-width: 1px;
+      border-color: rgb(51, 127, 244);
+      border-style: solid;
+      border-radius: 4px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 11px;
+      color: rgb(51, 127, 244);
+      padding: 0px 4px;
+    }
+
+  }
+
+  &--dlc {
+    border-width: 2px;
+    border-color: rgb(109, 109, 109);
+    border-style: solid;
+    border-radius: 4px;
+    height: 20px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 4px 0px 4px;
+
+    p {
+      font-size: 12px;
+      color: rgb(109, 109, 109);
+      font-weight: 500;
+    }
+  }
+}
+
+.b-ptag {
+  position: absolute;
+  top: 180px;
+  left: 2px;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+  padding: 0px 3px;
+  z-index: 2;
+
+  p {
+    font-weight: 700;
+    font-size: 15px;
+    background-color: red;
+
+  }
+
+  &::after {
+    transform: skewX(16deg);
+    border-radius: 7px;
+    background-color: red;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -2px;
+    content: '';
+    z-index: -1;
+  }
+
+}
+
+.b-btn {
+  &--menu {
+    color: white;
+    background-color: rgb(61, 61, 61);
+    width: 70px;
+    height: 34px;
+    border-radius: 35px;
+    padding: 2px 6px;
+    margin: 10px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+    border: 0;
+    cursor: pointer;
+    z-index: 1;
+
+    p {
+      font-weight: 700;
+      transition: all .2s;
+      font-size: 14px;
+      text-align: center;
+      background-color: rgb(61, 61, 61);
+      padding-bottom: 3px;
+      margin: 0px;
+    }
+
+    &:hover {
+      background-color: red;
+
+      p {
+        background-color: red;
+      }
+    }
+  }
+
+}
+
+.b-midb {
+  background-color: rgb(16, 16, 16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin: 40px 0px;
+
+  &--block {
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+    background-color: rgb(16, 16, 16);
+
+    img {
+      width: 40px;
+      margin: 12px;
+      background-color: rgb(16, 16, 16);
+    }
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+
+      h2 {
+        background-color: rgb(16, 16, 16);
+        color: white;
+        font-weight: 400;
+        font-size: 22px;
+      }
+
+      p {
+        color: #909090;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.spacer {
+  width: 1px;
+  height: 70px;
+  background-color: rgb(50, 50, 50);
+}
+
+.b-plat {
+  transition: .2s;
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  border-radius: 100%;
+  padding: 5px;
+
+  &--xbox {
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    transform: scale(1.1);
+    position: relative;
+    top: -1px;
+    -webkit-mask-image: url('./assets/img/icon-xbx-360.svg');
+    mask-image: url('./assets/img/icon-xbx-360.svg');
+
+  }
+}

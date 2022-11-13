@@ -1,0 +1,14 @@
+div {
+  padding-left: 30px;
+  transition: all .3s ease;
+  object-fit: cover;
+  font-size: 32px;
+  width: 120px;
+  background-color: rgb(16, 16, 16);
+  overflow: hidden;
+  padding-top: 6px;
+  img {
+    width: 100%;
+    background-color: rgb(16, 16, 16);
+  }
+}

@@ -1,0 +1,15 @@
+div {
+  padding-left: 30px;
+  transition: all 0.3s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-size: 32px;
+  width: 120px;
+  background-color: rgb(16, 16, 16);
+  overflow: hidden;
+  padding-top: 6px;
+}
+div img {
+  width: 100%;
+  background-color: rgb(16, 16, 16);
+}/*# sourceMappingURL=logo.component.css.map */

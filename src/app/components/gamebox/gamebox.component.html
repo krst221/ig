@@ -1,0 +1,18 @@
+<div class="b-gbox">
+  <div class="b-gbox--img" (mouseover)="playvideo()" (mouseout)="stopvideo()">
+    <app-platform [ngClass]="{'b-plat': box.platform === 'xbox'}" [plat]="box.platform" *ngIf="image"></app-platform>
+    <img src="{{box.imgUrl}}" alt="" *ngIf="image">
+    <video preload="none" width="350" height="200" [ngClass]="{'show': !image, 'hide': image}" muted playsinline loop onmouseover="this.play()" onmouseout="this.pause()">
+      <source src="{{box.videoUrl}}#t=0.5" type="video/webm">
+    </video>
+    <app-pricetag [discount]="box.discount"></app-pricetag>
+  </div>
+  <div class="b-gbox--text">
+    <div class="b-gbox--text--dlc">
+      <ng-template [ngIf]="box.dlc"><app-dlc></app-dlc></ng-template>
+      <span>{{box.name}}</span>
+    </div>
+    <p>{{box.price}}</p>
+  </div>
+</div>
+<ng-template [ngIf]="box.reserved"><app-reserved [days]="box.rdays"></app-reserved></ng-template>
