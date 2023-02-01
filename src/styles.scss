@@ -226,7 +226,7 @@ p {
 
   &--img:hover {
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.04);
     transition: all 400ms ease;
   }
 
@@ -322,8 +322,8 @@ p {
   }
 
   &::after {
-    transform: skewX(16deg);
-    border-radius: 7px;
+    transform: skewX(10deg);
+    border-radius: 8px;
     background-color: red;
     width: 100%;
     position: absolute;
